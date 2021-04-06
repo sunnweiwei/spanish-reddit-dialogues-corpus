@@ -13,7 +13,7 @@ def all_file(dirname):
 
 
 data = []
-for file in tqdm(all_file('sp_data')):
+for file in tqdm(all_file('data')):
     data.extend([json.loads(line) for line in open(file, encoding='utf-8')])
 data = [{'id': item['id'], 'parent_id': item['parent_id'], 'body': item['body']} for item in data]
 
@@ -34,9 +34,9 @@ for item in tqdm(data):
         mm += 1
 print(dd, len(data), mm)
 print(data[0])
-with open('sp_reddit/context.txt', 'w', encoding='utf-8') as f:
+with open('context.txt', 'w', encoding='utf-8') as f:
     for line in context:
         f.write(line + '\n')
-with open('sp_reddit/response.txt', 'w', encoding='utf-8') as f:
+with open('response.txt', 'w', encoding='utf-8') as f:
     for line in response:
         f.write(line + '\n')

@@ -69,7 +69,7 @@ def get_sp(sep=10000000, processes=5, name='04'):
         print(len(k))
         del data
         gc.collect()
-    with open(f'sp_data/RC_2019-{name}', 'w', encoding='utf-8') as f:
+    with open(f'data/RC_2019-{name}', 'w', encoding='utf-8') as f:
         for line in k:
             f.write(line)
 
@@ -88,4 +88,3 @@ get_sp(sep=s, processes=p, name='09')
 get_sp(sep=s, processes=p, name='10')
 get_sp(sep=s, processes=p, name='11')
 get_sp(sep=s, processes=p, name='12')
-# get_sp(sep=20000000, processes=15, name='10')

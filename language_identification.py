@@ -17,7 +17,7 @@ class LanguageIdentification:
         """
         Initializing class objects
         """
-        pretrained_lang_model = "models/lid.176.bin"
+        pretrained_lang_model = "lid.176.bin"
         self.model = fasttext.load_model(pretrained_lang_model)
 
     def predict_lang(self, text):
